@@ -199,6 +199,20 @@ ul {
 .nav {
   display: none;
 }
+.nav.show-nav {
+  display: block;
+  position:absolute;  top: 65px;
+    background-color: white;
+    width: 100%;
+    left: 0px;
+}
+.nav.show-nav .nav-link {
+ margin-left: 0px;
+    text-align: center;
+    display: block;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    border-bottom: 1px #ddcece solid;}
 
 .nav-link {
   margin-left: 1.5rem;

@@ -4,14 +4,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Mobile menu toggle
   const menuToggle = document.getElementById('menuToggle');
+  const nav = document.getElementById('mainNav');
+   const navLinks = document.querySelectorAll('.nav-link');
   
   if (menuToggle) {
     menuToggle.addEventListener('click', function() {
-      // This is where you'd implement a mobile menu
-      // For a simple static site, you can just alert the user
-      alert('Menu functionality would be implemented here. For this static site, please use the navigation links directly.');
+      nav.classList.toggle('show-nav');
     });
   }
+    navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('show-nav');
+    });
+  });
 
   // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
