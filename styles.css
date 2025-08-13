@@ -44,6 +44,7 @@ body {
   line-height: 1.5;
   color: var(--gray-800);
   background-color: var(--white);
+  overflow-x: hidden;
 }
 
 .container {
@@ -264,7 +265,7 @@ ul {
 
 /* Hero Section */
 .hero-section {
-  padding: 5rem 0;
+  padding: 2rem 0 4rem;
   background: linear-gradient(to bottom right, var(--gray-50), var(--white));
   overflow: hidden;
 }
@@ -305,7 +306,7 @@ ul {
 
 @media (min-width: 768px) {
   .hero-section {
-    padding: 8rem 0;
+    padding: 3rem 0 4rem;
   }
 
   .hero-wrapper {
@@ -701,3 +702,45 @@ ul {
     font-size: 3rem;
   }
 }
+
+
+ .road {
+      position: relative;
+      width: 100%;
+      height: 60px;
+      background-color:var(--primary);
+    }
+   
+
+    .car {
+      position: absolute;
+      bottom:-10px;
+      width: 400px;
+      animation: drive 15s linear infinite;
+    }
+
+     .car img{width: 80px; bottom:-12px}
+     .car h2{    color: white;
+    font-weight: 300;
+    font-size: 25px;}
+
+    @keyframes drive {
+      0% {
+        right: -120px;
+      }
+      100% {
+        right: 100vw;
+      }
+    }
+
+    @media (min-width: 1024px) {
+
+ 
+
+    .car {    
+      width: 500px; 
+    }
+
+     .car img{width: 100px; bottom:-17px}
+     .car h2{ font-size: 34px;}
+    }
