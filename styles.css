@@ -706,41 +706,86 @@ ul {
 
  .road {
       position: relative;
-      width: 100%;
+      width: 100%; overflow: hidden;
       height: 60px;
       background-color:var(--primary);
     }
    
 
-    .car {
+    .scrolling-text {
       position: absolute;
-      bottom:-10px;
-      width: 400px;
-      animation: drive 15s linear infinite;
+      bottom:-7px;   width:100%; text-align: center; 
     }
+     .scrolling-text h2{width:100%; text-align: center;   color: rgb(255, 255, 255); font-weight: 300;  font-size: 28px;}
 
-     .car img{width: 80px; bottom:-12px}
-     .car h2{    color: white;
-    font-weight: 300;
-    font-size: 25px;}
+     
+      .car-img{ position: absolute; width: 80px; bottom:0px;  animation: car 10s linear infinite;}
+     .van-img{ position: absolute; width: 60px; bottom:0px;  animation: van 14s linear infinite; display: none;}
+     .bus-img{ position: absolute; width: 120px; bottom:0px;  animation: bus 18s linear infinite; display: none;}
+    
 
-    @keyframes drive {
+    @keyframes text {
       0% {
-        right: -120px;
+        right: 0px; opacity: 0;
+      }
+       5% {
+        opacity: 1;
       }
       100% {
-        right: 100vw;
+        right: 100%;
       }
     }
 
-    @media (min-width: 1024px) {
-
- 
-
-    .car {    
-      width: 500px; 
+    
+    @keyframes car {
+      0% {
+        right: 0px; opacity: 0;
+      }
+     5% {
+        opacity: 1;
+      }
+      100% {
+        right: 100%;
+      }
     }
 
-     .car img{width: 100px; bottom:-17px}
-     .car h2{ font-size: 34px;}
+    
+    @keyframes van {
+      0% {
+        right: 0px; opacity: 0;
+      }
+       5% {
+        opacity: 1;
+      }
+      100% {
+        right: 100%
+      }
+    }
+
+    
+    @keyframes bus {
+      0% {
+        right: 0px; opacity: 0;
+      }
+       5% {
+        opacity: 1;
+      }
+      100% {
+        right: 100%;
+      }
+    }
+    @media (min-width: 768px) {
+.scrolling-text {
+      position: absolute;
+      bottom:-7px; width: auto;
+      animation: text 30s linear infinite;
+    }
+    .scrolling-text h2{width:460px;}
+    }
+    @media (min-width: 1024px) {
+
+ .car-img{ position: absolute; width: 80px; bottom:0px;  animation: car 10s linear infinite; }
+     .van-img{ position: absolute; width: 90px; bottom:0px;  animation: van 14s linear infinite; display: block;}
+     .bus-img{ position: absolute; width: 150px; bottom:0px;  animation: bus 18s linear infinite; display: block;}
+     .scrolling-text h2{ font-size: 34px;}
     }
