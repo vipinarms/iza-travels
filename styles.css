@@ -789,3 +789,14 @@ ul {
      .bus-img{ position: absolute; width: 150px; bottom:0px;  animation: bus 18s linear infinite; display: block;}
      .scrolling-text h2{ font-size: 34px;}
     }
+
+    .taxi-kottayam{
+        padding: 4rem 0;
+  background-color: var(--gray-50);
+    }
+    .taxi-kottayam ul{list-style: circle; font-size: 0.85rem; line-height: 2rem;}
+    .taxi-kottayam ul li{padding:2px 4px;}
+    .taxi-kottayam ul li:nth-child(even){background-color: white;}
+    .taxi-kottayam h2{  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;}
